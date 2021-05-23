@@ -1,0 +1,12 @@
+name = "Uwe Uwe"
+license = "MIT"
+licenselink = "https://github.com/mbrt-yeah/uwe-uwe-hugo/blob/master/LICENSE"
+description = "A minimalistic hugo theme for building documentation websites."
+homepage = "https://github.com/mbrt-yeah/uwe-uwe-hugo.git"
+tags = []
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = "Matthias Einbrodt"
+  homepage = "https://mbrt.io"
