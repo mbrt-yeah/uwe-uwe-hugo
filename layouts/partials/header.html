@@ -1,0 +1,15 @@
+<header id="page-header">
+
+    {{ if .Site.Params.Logo.Display }}
+        <div id="page-logo-wrapper">
+            <img id="page-logo" alt="Uwe Uwe Logo" src="{{ .Site.Params.Logo.Src }}" width="150" height="150" />
+        </div>
+    {{ end }}
+
+    <h1 id="page-title">{{ .Site.Title }}</h1>
+
+    {{ if .Site.Params.ShortDesc.Display }}
+        <div id="page-short-desc">{{ .Site.Params.Metadata.Description }}</div>
+    {{ end }}
+
+</header>

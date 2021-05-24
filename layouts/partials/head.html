@@ -1,0 +1,11 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <meta name="author"      content="{{ .Site.Params.Metadata.Author }}" />
+    <meta name="description" content="{{ .Site.Params.ShortDesc.Value }}" />
+
+    <title>{{ .Site.Title }}</title>
+
+    {{- partial "head-js.html" . -}}
+    {{- partial "head-css.html" . -}}
+</head>

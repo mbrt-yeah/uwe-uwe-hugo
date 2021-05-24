@@ -1,0 +1,312 @@
+/* =========================================
+   Resets
+   =========================================*/
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    margin: 0 0 0 18px;
+    padding: 0;
+}
+
+li > ul,
+li > ol {
+    margin: 6px 0 0 18px;
+}
+
+ul > li, ol > li {
+    margin-bottom: 6px;
+}
+
+ul > li:last-child, ol > li:last-child {
+    margin-bottom: 0px;
+}
+
+p,
+pre {
+    margin: 0;
+    padding: 0;
+}
+
+pre code {
+    display: block;
+}
+
+
+/* =========================================
+   Utility Classes
+   =========================================*/
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================================
+   Typography
+   =========================================*/
+
+h1, .h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+h2, .h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+h2:before {
+    content: "◪";
+    margin-right: 6px;
+}
+
+h3, .h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+h4, .h4 {
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+h5, .h5 {
+    font-size: 0.875rem;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   Layout & Design
+   =========================================*/
+
+h2 {
+    border-bottom: 1px dashed;
+    padding-bottom: 6px;
+    margin-top: 48px;
+}
+
+h3 {
+    margin-top: 24px;
+}
+
+h2,
+h3,
+h3 ~ ol,
+h3 ~ ul,
+h3 ~ p,
+h3 ~ pre,
+h3 ~ table {
+    margin-bottom: 24px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+p:last-child,
+pre:last-child {
+    margin-bottom: 0;
+}
+
+p > code {
+    background-color: #eee;
+    font-size: 0.875rem;
+    padding: 1px;
+}
+
+section {
+    margin-bottom: 48px;
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+section section {
+    margin-bottom: 24px;
+}
+
+section section h3 {
+    margin-top: 0;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+figure > img {
+    width: 100%;
+    height: auto;
+}
+
+figure > figcaption {
+    font-size: 0.875rem;
+    font-style: italic;
+    text-align: center;
+    margin-top: 6px;
+}
+
+table {
+    width: 100%;
+}
+
+
+table > caption {
+    font-size: 0.875rem;
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+table th {
+    border-top: solid 1px;
+}
+
+table th,
+table td {
+    border-bottom: solid 1px;
+    text-align: left;
+}
+
+#page-header,
+#page-toc,
+#page-content {
+    margin: 48px auto 0px auto;
+    width: 480px; 
+}
+
+#page-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+#page-header #page-logo-wrapper {
+    background-color: #000000;
+    border-radius: 50%;
+    height: 150px;
+    margin-bottom: 24px;
+    margin: 0 auto;
+    width: 150px;
+}
+
+#page-header #page-short-desc {
+    font-style: italic;
+    margin-top: 12px;
+}
+
+#page-toc {
+    border: 3px dashed #000000;
+    box-sizing: border-box;
+    padding: 24px;
+    margin-bottom: 72px;
+}
+
+#page-toc h2 {
+    border: 0;
+    margin-top: 0;
+    margin-bottom: 12px;
+    padding: 0;
+}
+
+#page-toc h2:before {
+    content: "";
+    margin-right: 0;
+}
+
+#page-toc li {
+    margin: 14px 0;
+}
+
+#page-toc li:last-child {
+    margin-bottom: 0;
+}
+
+.code-example-block {
+    font-size: 0.875rem;
+    margin: 24px 0;
+}
+
+.code-example-block .code-example-result h3 {
+    margin-bottom: 12px;
+}
+
+.code-example-block .code-example-menu {
+    align-items: center;
+    background-color: #333;
+    border: solid #333;
+    border-width: 1px;
+    color: #fff;
+    display: flex;
+    padding: 0;
+}
+
+.code-example-block .code-example-menu .code-example-menu-item {
+    margin: 0;
+    padding: 3px 12px;
+}
+
+.code-example-block .code-example-menu .code-example-menu-item.active {
+    background-color: #000;
+}
+
+.code-example-block pre {
+    border: dashed;
+    border-width: 0 1px 1px 1px;
+    padding: 12px;
+}
+
+.code-example-block .code-example-caption {
+    font-style: italic;
+    margin-top: 6px;
+    text-align: center;
+}
+
+.sidenote {
+    box-sizing: border-box;
+    width: 240px;
+}
+
+.sidenote.right {
+    clear: right;
+    float: right;
+    margin-right: -312px;
+}
+
+.sidenote.left {
+    clear: left;
+    float: left;
+    margin-left: -312px;
+}
+
+.notification {
+    border: 3px dashed;
+    display: flex;
+    margin: 24px 0;
+    padding: 12px;
+}
+
+.notification img {
+    margin-right: 12px;
+}
+
+.notification h4 {
+    margin-bottom: 6px;
+}
+
+.sidenote.notification {
+    margin-top: 0;
+    margin-bottom: 0;
+}

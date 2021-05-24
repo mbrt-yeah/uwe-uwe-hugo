@@ -1,0 +1,14 @@
+{{ $pagesTotal := len .Pages }}
+{{ $hasPages := gt $pagesTotal 0 }}
+{{ $showToc := and .Site.Params.Toc.Display $hasPages }}
+
+{{ if $showToc }} 
+    <nav id="page-toc">
+        <h2>Table of Contents</h2>
+        <ul>
+            {{ range .Pages }}
+                <li><a href="#{{ lower .Title }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+    </nav>
+{{ end }}

@@ -1,0 +1,16 @@
+{{ define "subpages" }}
+    {{ if .IsSection }}
+        {{ .Content | safeHTML }}
+        {{ range .Pages}}
+            {{ template "subpages" . }}
+        {{ end }}
+    {{ else }}
+        {{ .Content | safeHTML }}
+    {{ end }}
+{{ end }}
+
+{{ define "main" }}
+    {{ range .Pages }}
+        {{ template "subpages" . }}
+    {{ end }}
+{{ end }}
