@@ -1,0 +1,12 @@
+{{ $type  := .Get "type" }}
+
+<div aria-label="notification - {{ $type }}" class="notification {{$type}}">
+    <img alt="{{ $type }} icon" src="/assets/img/{{ $type }}-icon.png" height="48" width="48">
+    <div>
+        {{ with .Get "title" }}
+            <h4>{{ $title}}</h4>
+        {{ end }}>
+        
+        {{ .Inner | markdownify }}
+    </div>
+</div>
