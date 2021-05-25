@@ -142,11 +142,13 @@ blockquote > footer {
     font-size: 0.875rem;
 }
 
+pre,
 :not(pre) > code[class*="language-"], 
 pre[class*="language-"] {
     background: transparent;
 }
 
+pre,
 pre[class*="language-"] {
     border: 1px dashed;
     margin: 0;
