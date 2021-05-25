@@ -9,7 +9,7 @@
     <h1 id="page-title">{{ .Site.Title }}</h1>
 
     {{ if .Site.Params.ShortDesc.Display }}
-        <div id="page-short-desc">{{ .Site.Params.Metadata.Description }}</div>
+        <div id="page-short-desc">{{ .Site.Params.ShortDesc.Value }}</div>
     {{ end }}
 
     {{- partial "platform-links.html" . -}}
