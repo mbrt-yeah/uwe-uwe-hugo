@@ -266,39 +266,20 @@ table td {
     font-size: 12px;
 }
 
-#page-header #page-platform-links.as-icons a::before,
-#page-header #page-platform-links.as-icons-and-text a::before {
-    background-repeat: no-repeat;
-    background-position: center center;
-    content: "";
+#page-header #page-platform-links.as-icons-and-text a > img {
+    margin-bottom: 3px;
+}
+
+#page-header #page-platform-links.as-icons-and-text a > span {
     display: block;
-    margin: 0 auto 6px auto;
-    height: 36px;
-    width: 36px;
 }
 
-#page-header #page-platform-links.as-icons a {
-    font-size: 0;
+#page-header #page-platform-links.as-icons a > span {
+    display: none;
 }
 
-#page-header #page-platform-links.as-icons a.bitbucket-icon::before,
-#page-header #page-platform-links.as-icons-and-text a.bitbucket-icon::before {
-    background-image: url(../assets/img/icons-platforms/bitbucket-icon.svg);
-}
-
-#page-header #page-platform-links.as-icons a.gitlab-icon::before,
-#page-header #page-platform-links.as-icons-and-text a.gitlab-icon::before {
-    background-image: url(../assets/img/icons-platforms/gitlab-icon.svg);
-}
-
-#page-header #page-platform-links.as-icons a.github-icon::before,
-#page-header #page-platform-links.as-icons-and-text a.github-icon::before {
-    background-image: url(../assets/img/icons-platforms/github-icon.svg);
-}
-
-#page-header #page-platform-links.as-icons a.sourceforge-icon::before,
-#page-header #page-platform-links.as-icons-and-text a.sourceforge-icon::before {
-    background-image: url(../assets/img/icons-platforms/sourceforge-icon.svg);
+#page-header #page-platform-links.as-text a > img {
+    display: none;
 }
 
 #page-toc {
