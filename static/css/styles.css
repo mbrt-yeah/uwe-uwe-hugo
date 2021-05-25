@@ -217,7 +217,7 @@ table td {
 #page-toc,
 #page-content {
     margin: 48px auto 0px auto;
-    width: 480px; 
+    width: 480px;
 }
 
 #page-header {
@@ -229,8 +229,7 @@ table td {
     background-color: #000000;
     border-radius: 50%;
     height: 150px;
-    margin-bottom: 24px;
-    margin: 0 auto;
+    margin: 0 auto 24px auto;
     width: 150px;
 }
 
