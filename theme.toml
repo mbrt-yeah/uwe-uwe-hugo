@@ -5,7 +5,7 @@ description = "A minimalistic hugo theme for building documentation websites."
 homepage = "https://github.com/mbrt-yeah/uwe-uwe-hugo.git"
 tags = []
 features = []
-min_version = "0.41.0"
+min_version = "0.71.0"
 
 [author]
   name = "Matthias Einbrodt"
