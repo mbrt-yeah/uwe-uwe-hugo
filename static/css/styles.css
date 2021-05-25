@@ -2,7 +2,7 @@
    Resets
    =========================================*/
 
-body {
+   body {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 16px;
     margin: 0;
@@ -33,6 +33,7 @@ ul > li:last-child, ol > li:last-child {
     margin-bottom: 0px;
 }
 
+blockquote,
 p,
 pre {
     margin: 0;
@@ -112,13 +113,44 @@ h3 ~ table {
     margin-bottom: 24px;
 }
 
-p {
+
+blockquote,
+p,
+pre {
     margin-bottom: 12px;
 }
 
+blockquote:last-child,
 p:last-child,
 pre:last-child {
     margin-bottom: 0;
+}
+
+blockquote::before {
+    content: '”';
+    font-weight: 800;
+    font-size: 48px;
+    float: left;
+    margin-top: -8px;
+}
+
+blockquote > * {
+    margin-left: 48px;
+}
+
+blockquote > footer {
+    font-size: 0.875rem;
+}
+
+:not(pre) > code[class*="language-"], 
+pre[class*="language-"] {
+    background: transparent;
+}
+
+pre[class*="language-"] {
+    border: 1px dashed;
+    margin: 0;
+    padding: 12px;
 }
 
 p > code {
@@ -207,6 +239,68 @@ table td {
     margin-top: 12px;
 }
 
+#page-header #page-platform-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 36px 0 0 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+#page-header #page-platform-links li {
+    margin-right: 24px;
+    margin-bottom: 0;
+    padding: 12px 0 0 0;
+}
+
+#page-header #page-platform-links li:last-child {
+    margin-right: 0px;
+}
+
+#page-header #page-platform-links a {
+    display: block;
+}
+
+#page-header #page-platform-links.as-icons-and-text {
+    font-size: 12px;
+}
+
+#page-header #page-platform-links.as-icons a::before,
+#page-header #page-platform-links.as-icons-and-text a::before {
+    background-repeat: no-repeat;
+    background-position: center center;
+    content: "";
+    display: block;
+    margin: 0 auto 6px auto;
+    height: 36px;
+    width: 36px;
+}
+
+#page-header #page-platform-links.as-icons a {
+    font-size: 0;
+}
+
+#page-header #page-platform-links.as-icons a.bitbucket-icon::before,
+#page-header #page-platform-links.as-icons-and-text a.bitbucket-icon::before {
+    background-image: url(../assets/img/icons-platforms/bitbucket-icon.svg);
+}
+
+#page-header #page-platform-links.as-icons a.gitlab-icon::before,
+#page-header #page-platform-links.as-icons-and-text a.gitlab-icon::before {
+    background-image: url(../assets/img/icons-platforms/gitlab-icon.svg);
+}
+
+#page-header #page-platform-links.as-icons a.github-icon::before,
+#page-header #page-platform-links.as-icons-and-text a.github-icon::before {
+    background-image: url(../assets/img/icons-platforms/github-icon.svg);
+}
+
+#page-header #page-platform-links.as-icons a.sourceforge-icon::before,
+#page-header #page-platform-links.as-icons-and-text a.sourceforge-icon::before {
+    background-image: url(../assets/img/icons-platforms/sourceforge-icon.svg);
+}
+
 #page-toc {
     border: 3px dashed #000000;
     box-sizing: border-box;
@@ -235,37 +329,26 @@ table td {
 }
 
 .code-example-block {
-    font-size: 0.875rem;
     margin: 24px 0;
 }
 
-.code-example-block .code-example-result h3 {
-    margin-bottom: 12px;
+.code-example-block pre {
+    font-size: 0.875rem;
 }
 
 .code-example-block .code-example-menu {
-    align-items: center;
-    background-color: #333;
-    border: solid #333;
-    border-width: 1px;
-    color: #fff;
     display: flex;
-    padding: 0;
+    font-size: 0.875rem;
+    margin: 0px 3px 6px 3px;
 }
 
 .code-example-block .code-example-menu .code-example-menu-item {
-    margin: 0;
-    padding: 3px 12px;
+    margin-right: 12px;
+    text-decoration: none;
 }
 
 .code-example-block .code-example-menu .code-example-menu-item.active {
-    background-color: #000;
-}
-
-.code-example-block pre {
-    border: dashed;
-    border-width: 0 1px 1px 1px;
-    padding: 12px;
+    font-weight: 800;
 }
 
 .code-example-block .code-example-caption {
