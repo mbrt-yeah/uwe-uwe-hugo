@@ -1,0 +1,12 @@
+{{ if .Site.Params.PlatformLinks.Display }}
+
+    {{ $displayMode := .Site.Params.PlatformLinks.DisplayMode | default "as-icons-and-text" }}
+
+    <ul id="page-platform-links" class="{{ $displayMode }}">
+        {{ range .Site.Params.PlatformLinks.Platforms }}
+            {{ if .display }}
+                <li><a href='{{ .target | default "#" }}' class="{{ .name }}-icon" title="{{ .title }}">{{ .text }}</a></li>
+            {{ end }}
+        {{ end }}
+    </ul>
+{{ end }}
