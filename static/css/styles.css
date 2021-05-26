@@ -9,6 +9,15 @@
     padding: 0;
 }
 
+button {
+    background: transparent;
+    border: 0;
+    font-family: inherit;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
     margin: 0;
@@ -310,33 +319,37 @@ table td {
     margin-bottom: 0;
 }
 
-.code-example-block {
+.tabs-container {
     margin: 24px 0;
 }
 
-.code-example-block pre {
-    font-size: 0.875rem;
-}
-
-.code-example-block .code-example-menu {
+.tabs-container .tablist {
     display: flex;
     font-size: 0.875rem;
     margin: 0px 3px 6px 3px;
+    padding: 0;
 }
 
-.code-example-block .code-example-menu .code-example-menu-item {
+.tabs-container .tablist .tab {
+    color: rgb(0, 0, 238);
     margin-right: 12px;
     text-decoration: none;
 }
 
-.code-example-block .code-example-menu .code-example-menu-item.active {
+.tabs-container .tablist .tab.active {
     font-weight: 800;
 }
 
-.code-example-block .code-example-caption {
-    font-style: italic;
-    margin-top: 6px;
-    text-align: center;
+.tabs-container .tablist .tab:hover {
+    cursor: pointer;
+}
+
+.tabs-container .tablist .tab:visited {
+    color: rgb(85, 26, 139);
+}
+
+.code-example-block pre {
+    font-size: 0.875rem;
 }
 
 .sidenote {

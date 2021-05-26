@@ -1,0 +1,20 @@
+{{ $parentId     := .Parent.Get "id" }}
+{{ $tabsTotalKey := (print $parentId "-tabsTotal") }}
+{{ $tabTitlesKey := (print $parentId "-tabTitles") }}
+
+{{ .Page.Scratch.Add $tabsTotalKey 1 }}
+
+{{ $tabNum   := .Page.Scratch.Get $tabsTotalKey }}
+{{ $tabTitle := .Get "title" | default (print "tab-" $tabNum) }}
+
+{{ .Page.Scratch.Add $tabTitlesKey (slice $tabTitle) }}
+
+<div
+    {{ if not (eq $tabNum 1) }} aria-hidden="true" {{ end }}
+    aria-labelledby="{{$parentId}}-tab-{{$tabNum}}"
+    role="tabpanel"
+    class="tabpanel {{ if not (eq $tabNum 1) }} hidden {{ end }}"
+    id="{{$parentId}}-tabpane-{{$tabNum}}"
+>
+    {{ .Inner | markdownify }}
+</div>

@@ -1,0 +1,20 @@
+{{ $id := .Get "id" }}
+{{ $tabsTotal := .Page.Scratch.Get (print $id "-tabsTotal") }}
+{{ $tabTitles := .Page.Scratch.Get (print $id "-tabTitles") }}
+
+<div class="tabs-container" id="{{ $id }}">
+    <div class="tablist" role="tablist">
+        {{ range $i, $s := (seq $tabsTotal) }}
+            <a 
+                role="tab" 
+                class="tab {{ if eq $s 1 }} active {{ end }}" 
+                id="{{ $id }}-tab-{{ $s }}" 
+                href="#{{ $id }}-tabpane-{{ $s }}"
+            >
+                {{ index $tabTitles $i }}
+            </a>
+        {{ end }}
+    </div>
+
+    {{ .Inner }}
+</div>
