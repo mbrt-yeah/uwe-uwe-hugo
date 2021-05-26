@@ -224,6 +224,35 @@ table td {
     text-align: left;
 }
 
+#page-404 body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#page-404 body img {
+    margin-top: -120px;
+    margin-bottom: 48px;
+}
+
+#page-404 body p.error-code,
+#page-404 body p.error-message {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#page-404 body p.error-code {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+#page-404 body p.error-message {
+    font-size: 2rem;
+}
+
 #page-header,
 #page-toc,
 #page-content {
