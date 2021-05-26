@@ -319,6 +319,10 @@ table td {
     margin-bottom: 0;
 }
 
+#page-content {
+    margin-bottom: 48px;
+}
+
 .tabs-container {
     margin: 24px 0;
 }
