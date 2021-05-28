@@ -9,6 +9,10 @@
     padding: 0;
 }
 
+abbr {
+    text-decoration: none;
+}
+
 button {
     background: transparent;
     border: 0;
@@ -21,6 +25,14 @@ button {
 h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
     margin: 0;
+    padding: 0;
+}
+
+hr {
+    border-color: #000000;
+    border-style: dashed;
+    border-width: 1px;
+    margin: 24px 0;
     padding: 0;
 }
 
@@ -113,26 +125,84 @@ h3 {
 }
 
 h2,
-h3,
-h3 ~ ol,
-h3 ~ ul,
-h3 ~ p,
-h3 ~ pre,
-h3 ~ table {
+h3 {
     margin-bottom: 24px;
 }
 
-
+.__h_video,
+.highlight,
+.katex-display,
 blockquote,
-p,
-pre {
+figure,
+iframe,
+pre,
+table {
+    margin: 24px 0;
+}
+
+ol,
+ul {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+p {
     margin-bottom: 12px;
 }
 
+.__h_video:last-child,
+.highlight:last-child,
+.katex-display:last-child,
 blockquote:last-child,
+figure:last-child,
+iframe:last-child,
+ol:last-child,
 p:last-child,
-pre:last-child {
+pre:last-child
+table:last-child,
+ul:last-child {
     margin-bottom: 0;
+}
+
+mark {
+    padding: 1px;
+}
+
+kbd {
+    background-color: rgb(247, 247, 247);
+    border-radius: 3px;
+    border: 1px solid rgb(204, 204, 204);
+    box-shadow: 0px 1px 0px rgba(0,0,0,0.2), inset 0px 0px 0px 2px #ffffff;
+    display: inline-block;
+    margin: 0px 0.1em;
+    padding: 0.1em 0.6em;
+    text-shadow: 0 1px 0 #fff;
+
+    -moz-border-radius: 3px;
+    -moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff inset;
+    -webkit-border-radius: 3px;
+    -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff inset;
+    
+}
+
+kbd kbd {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    text-shadow: none;
+
+    -moz-border-radius: 0;
+    -moz-box-shadow: none;
+    -webkit-border-radius: 0;
+    -webkit-box-shadow: none;
+}
+
+.katex-display {
+    border: 1px dashed;
+    padding: 12px;
 }
 
 blockquote::before {
@@ -151,17 +221,26 @@ blockquote > footer {
     font-size: 0.875rem;
 }
 
-pre,
-:not(pre) > code[class*="language-"], 
-pre[class*="language-"] {
-    background: transparent;
+blockquote.twitter-tweet::before {
+    content: "T"
 }
 
 pre,
-pre[class*="language-"] {
-    border: 1px dashed;
-    margin: 0;
-    padding: 12px;
+:not(pre) > code[class*="language-"], 
+pre[class*="language-"],
+.highligt > pre {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+pre,
+pre[class*="language-"],
+.highligt > pre {
+    border: 1px dashed #000000 !important;
+    color: #000000 !important;
+    font-size: 0.875rem;
+    overflow-x: auto;
+    padding: 12px !important;
 }
 
 p > code {
