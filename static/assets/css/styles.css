@@ -335,8 +335,17 @@ table td {
 #page-header,
 #page-toc,
 #page-content {
-    margin: 48px auto 0px auto;
-    width: 480px;
+    margin: 48px 24px 0px 24px;
+    max-width: 480px;
+}
+
+@media screen and (min-width: 529px) {
+    #page-header,
+    #page-toc,
+    #page-content {
+        margin: 48px auto 0px auto;
+        width: 480px;
+    }
 }
 
 #page-header {
