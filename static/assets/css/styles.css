@@ -230,7 +230,15 @@ blockquote > footer {
 }
 
 blockquote.twitter-tweet::before {
-    content: "T"
+    background: url("../img/icons-platforms/twitter-icon.svg");
+    content: "";
+    margin-top: 0px;
+    width: 36px;
+    height: 36px;
+}
+
+blockquote.twitter-tweet > p {
+    margin-left: 60px
 }
 
 pre,
