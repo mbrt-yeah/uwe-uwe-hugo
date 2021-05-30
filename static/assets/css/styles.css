@@ -473,21 +473,27 @@ table td {
     font-size: 0.875rem;
 }
 
-.sidenote {
-    box-sizing: border-box;
-    width: 240px;
-}
+@media screen and (min-width: 768px) {
+    .sidenote {
+        box-sizing: border-box;
+        width: 240px;
+    }
 
-.sidenote.right {
-    clear: right;
-    float: right;
-    margin-right: -312px;
-}
+    .sidenote.notification {
+        margin-top: 0;
+    }
 
-.sidenote.left {
-    clear: left;
-    float: left;
-    margin-left: -312px;
+    .sidenote.right {
+        clear: right;
+        float: right;
+        margin-right: -288px;
+    }
+    
+    .sidenote.left {
+        clear: left;
+        float: left;
+        margin-left: -288px;
+    }
 }
 
 .notification {
@@ -503,9 +509,4 @@ table td {
 
 .notification h4 {
     margin-bottom: 6px;
-}
-
-.sidenote.notification {
-    margin-top: 0;
-    margin-bottom: 0;
 }
