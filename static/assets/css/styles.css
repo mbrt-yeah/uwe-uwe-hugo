@@ -489,7 +489,40 @@ table td {
     font-size: 0.875rem;
 }
 
-@media screen and (min-width: 768px) {
+.fn {
+    background-color: #000;
+    bottom: 0;
+    color: #fff;
+    display: none;
+    left: 0;
+    margin: 0;
+    padding: 24px;
+    position: fixed;
+    right: 0;
+}
+
+@media screen and (max-width: 1103px) {
+    .fn {
+        margin-top: 0 !important;
+    }
+}
+
+@media screen and (min-width: 1104px) {
+    .fn {
+        background-color: transparent;
+        color: inherit;
+        display: block;
+        padding: 0;
+        position: relative;
+        font-size: 0.875rem;
+        font-size: 14px;
+        text-indent: -9px;
+    }
+
+    .fn sup {
+        font-weight: 800;
+    }
+
     .sidenote {
         box-sizing: border-box;
         width: 240px;
