@@ -460,6 +460,11 @@ table td {
     margin: 24px 0;
 }
 
+.tabs-container .highlight,
+.tabs-container pre {
+    margin-top: 0;
+}
+
 .tabs-container .tablist {
     display: flex;
     font-size: 0.875rem;
