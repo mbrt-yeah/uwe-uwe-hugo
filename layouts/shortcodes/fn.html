@@ -1,0 +1,8 @@
+{{ $content := .Inner }}
+{{ $id      := .Get "id" }}
+
+{{ if $content }}
+<aside class="fn sidenote right" id="fn-{{ $id }}"><sup>{{ $id }}</sup> {{ $content }}<button>close</button></aside>
+{{ else }}
+<sup class="fn-ref" id="fn-ref-{{ $id }}"><a href="#fn-{{ $id }}">{{ $id }}</a></sup>
+{{ end }}
