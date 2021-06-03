@@ -1,9 +1,9 @@
-{{ if .Site.Params.PlatformLinks.Display }}
+{{ if .Site.Params.UweUwe.PlatformLinks.Display }}
 
-    {{ $displayMode := .Site.Params.PlatformLinks.DisplayMode | default "as-icons-and-text" }}
+    {{ $displayMode := .Site.Params.UweUwe.PlatformLinks.DisplayMode | default "as-icons-and-text" }}
 
     <ul id="page-platform-links" class="{{ $displayMode }}">
-        {{ range .Site.Params.PlatformLinks.Platforms }}
+        {{ range .Site.Params.UweUwe.PlatformLinks.Platforms }}
             {{ if .display }}
                 <li>
                     <a href='{{ .target | default "#" }}' title="{{ .title }}">
