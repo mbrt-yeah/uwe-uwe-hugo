@@ -456,6 +456,14 @@ table td {
     margin-bottom: 96px;
 }
 
+.link-wrapper {
+    margin: 0 3px;
+}
+
+.link-wrapper img {
+    margin-left: 3px;
+}
+
 .tabs-container {
     margin: 24px 0;
 }

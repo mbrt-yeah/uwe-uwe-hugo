@@ -1,0 +1,19 @@
+{{ if strings.HasPrefix .Destination "http" }}
+    <span class="link-wrapper">
+        <a
+            {{ if .Title}} title="{{ . }}" {{ end }}
+            href="{{ .Destination | safeURL }}"
+            target="_blank"
+        >
+            {{.Text | safeHTML}}
+        </a>
+        <img src="/assets/img/icons/external-link-icon.svg" height="12" width="12" />
+    </span>
+{{ else }}
+        <a
+            {{ if .Title}} title="{{ . }}" {{ end }}
+            href="{{ .Destination | safeURL }}"
+        >
+            {{.Text | safeHTML}}
+        </a>
+{{ end }}
