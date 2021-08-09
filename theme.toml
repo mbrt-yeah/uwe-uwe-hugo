@@ -1,10 +1,21 @@
 name = "Uwe Uwe"
 license = "MIT"
 licenselink = "https://github.com/mbrt-yeah/uwe-uwe-hugo/blob/master/LICENSE"
-description = "A minimalistic hugo theme for building documentation websites."
+description = "A minimalist hugo theme for building documentation websites."
 homepage = "https://github.com/mbrt-yeah/uwe-uwe-hugo.git"
-tags = []
-features = []
+tags = [
+  "docs",
+  "minimal",
+  "responsive"
+]
+features = [
+  "All content rendered on one page",
+  "Info, warning and danger notifications (can also be displayed as sidenotes)",
+  "Tabs (can also be used for code examples)",
+  "Footnotes which are displayed as sidenotes or as modals on screens with a smaller horizontal screen resolution",
+  "Configurable platform links with three visualization modes (as icon, as text and icon, as text only)",
+  "Configurable logo, short description and table of contents"
+]
 min_version = "0.71.0"
 
 [author]
