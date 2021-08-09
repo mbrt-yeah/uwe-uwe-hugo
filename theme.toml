@@ -16,7 +16,7 @@ features = [
   "Configurable platform links with three visualization modes (as icon, as text and icon, as text only)",
   "Configurable logo, short description and table of contents"
 ]
-min_version = "0.71.0"
+min_version = ""
 
 [author]
   name = "Matthias Einbrodt"
