@@ -2,7 +2,8 @@ name = "Uwe Uwe"
 license = "MIT"
 licenselink = "https://github.com/mbrt-yeah/uwe-uwe-hugo/blob/master/LICENSE"
 description = "A minimalist hugo theme for building documentation websites."
-homepage = "https://github.com/mbrt-yeah/uwe-uwe-hugo.git"
+homepage = "https://github.com/mbrt-yeah/uwe-uwe-hugo"
+demosite = "https://mbrt-yeah.github.io/uwe-uwe-hugo-example/"
 tags = [
   "docs",
   "minimal",
@@ -16,7 +17,6 @@ features = [
   "Configurable platform links with three visualization modes (as icon, as text and icon, as text only)",
   "Configurable logo, short description and table of contents"
 ]
-min_version = ""
 
 [author]
   name = "Matthias Einbrodt"
