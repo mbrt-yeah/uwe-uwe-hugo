@@ -6,4 +6,4 @@ It will create a very simple website by merging all your markdown and/or html pa
 
 No other kinds of webpages or files in other output formats are created.
 
-Please check the full documentation at [https://mbrt-yeah.github.io/uwe-uwe-hugo/](https://mbrt-yeah.github.io/uwe-uwe-hugo/) for more information.
+Please check the full documentation at [https://mbrt-yeah.github.io/uwe-uwe-hugo-docs/](https://mbrt-yeah.github.io/uwe-uwe-hugo-docs/) for more information.
