@@ -515,6 +515,15 @@ table td {
     right: 0;
 }
 
+.fn .close-button {
+    color: #fff;
+    height: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 24px;
+}
+
 @media screen and (max-width: 1103px) {
     .fn {
         margin-top: 0 !important;
@@ -531,6 +540,10 @@ table td {
         font-size: 0.875rem;
         font-size: 14px;
         text-indent: -9px;
+    }
+
+    .fn .close-button {
+        display: none;
     }
 
     .fn sup {
