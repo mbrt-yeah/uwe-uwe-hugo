@@ -517,6 +517,7 @@ table td {
 
 .fn .close-button {
     color: #fff;
+    cursor: pointer;
     height: 24px;
     position: absolute;
     right: 0;
