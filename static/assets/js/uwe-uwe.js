@@ -2,9 +2,10 @@ const UWE_UWE = window.UWE_UWE || {};
 
 UWE_UWE.FOOTNOTES = (() => {
     const config = {
-        "fnRefSelector": ".fn-ref",
-        "fnSelector":    ".fn",
-        "vwSidenotes":   1104
+        "fnRefSelector":      ".fn-ref",
+        "fnSelector":         ".fn",
+        "fnCloseBtnSelector": ".close-button",
+        "vwSidenotes":        1104
     };
 
     const cache = {
@@ -39,6 +40,34 @@ UWE_UWE.FOOTNOTES = (() => {
             });
         }
 
+        for (const fn of cache.fns) {
+            const fnCloseBtn = fn.querySelector(config.fnCloseBtnSelector);
+
+            if (fnCloseBtn === null) {
+                continue;
+            }
+
+            fnCloseBtn.addEventListener("click", function(e) {
+                e.preventDefault();
+
+                if ( isFnDisplayedAsSidenote() ) {
+                    return;
+                }
+
+                const fn = e.target.parentElement;
+
+                if (fn === null) {
+                    return;
+                }
+
+                if (fn.id !== cache.fnFocused.id) {
+                    return;
+                }
+
+                hideFootnote();
+            });
+        }
+
         document.onkeydown = function(e) {
             if ( isFnDisplayedAsSidenote() ) {
                 return;
@@ -50,8 +79,7 @@ UWE_UWE.FOOTNOTES = (() => {
                 return;
             }
 
-            cache.fnFocused.style.display = "none";
-            cache.fnFocused = undefined;
+            hideFootnote();
         };
 
         window.addEventListener("resize", (e) => {
@@ -109,6 +137,11 @@ UWE_UWE.FOOTNOTES = (() => {
         }
     }
 
+    function hideFootnote() {
+        cache.fnFocused.style.display = "none";
+        cache.fnFocused = undefined;
+    }
+
     function displayFootnote(fnId) {
         if (!fnId) {
             return;
@@ -132,7 +165,6 @@ UWE_UWE.FOOTNOTES = (() => {
         }
 
         const styleFnFinal = window.getComputedStyle(cache.fnFocused, null);
-
         const marginRight = parseInt( styleFnFinal.marginRight.replace("px", "") );
         const marginLeft  = parseInt( styleFnFinal.marginLeft.replace("px", "") );
 
