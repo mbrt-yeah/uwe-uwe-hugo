@@ -38,8 +38,10 @@ UWE_UWE.FOOTNOTES = (() => {
 
                 displayFootnote( e.target.getAttribute("href").slice(1) );
             });
+        }
 
-            const fnCloseBtn = fnRef.querySelector(config.fnCloseBtnSelector);
+        for (const fn of cache.fns) {
+            const fnCloseBtn = fn.querySelector(config.fnCloseBtnSelector);
 
             if (fnCloseBtn === null) {
                 continue;
