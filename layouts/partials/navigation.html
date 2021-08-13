@@ -7,7 +7,7 @@
         <h2>Table of Contents</h2>
         <ul>
             {{ range .Pages }}
-                <li><a href="#{{ lower .Title }}">{{ .Title }}</a></li>
+                <li><a href="#{{ .Title | lower | urlize }}">{{ .Title }}</a></li>
             {{ end }}
         </ul>
     </nav>
