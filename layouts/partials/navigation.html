@@ -2,8 +2,8 @@
 {{ $hasPages := gt $pagesTotal 0 }}
 {{ $showToc := and .Site.Params.UweUwe.Toc.Display $hasPages }}
 
-{{ if $showToc }} 
-    <nav id="page-toc">
+{{ if $showToc }}
+    <nav id="page-toc" class='{{ .Site.Params.UweUwe.Toc.DisplayMode | default "static" }}'>
         <h2>Table of Contents</h2>
         <ul>
             {{ range .Pages }}
