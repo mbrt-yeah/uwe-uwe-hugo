@@ -16,6 +16,13 @@
     <body class='toc-{{ .Site.Params.UweUwe.Toc.DisplayMode | default "static" }}'>
 
         <!-- 
+        ##################
+        ### TOC BUTTON ###
+        ##################
+        -->
+        {{- partial "toc-button.html" . -}}
+
+        <!-- 
         ######################
         ### CONTENT HEADER ###
         ######################
@@ -27,7 +34,7 @@
         ### CONTENT NAVIGATION / TOC ###
         ################################
         -->
-        {{- partial "navigation.html" . -}}
+        {{- partial "toc.html" . -}}
 
         <!-- 
         ###############
