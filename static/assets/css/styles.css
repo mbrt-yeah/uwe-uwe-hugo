@@ -2,7 +2,7 @@
    Resets
    =========================================*/
 
-   body {
+body {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -426,11 +426,61 @@ table td {
     display: none;
 }
 
+#toc-button {
+    background-color: #fff;
+    border: 1px dashed #000;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 20px;
+    position: fixed;
+    right: 48px;
+    top: 48px;
+    z-index: 4999;
+}
+
+#toc-button:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
+
+#toc-button .toc-button-img {
+    margin-bottom: 6px;
+}
+
+#toc-button .toc-button-text {
+    font-size: 12px;
+}
+
+.toc-static #toc-button {
+    display: none;
+}
+
 #page-toc {
+    display: none;
+}
+
+#page-toc.static {
+    display: block;
     border: 3px dashed #000000;
     box-sizing: border-box;
     padding: 24px;
     margin-bottom: 72px;
+}
+
+#page-toc.sticky {
+    background-color: rgba(255,255,255,0.96);
+    bottom: 0;
+    display: block;
+    flex-direction: column;
+    left: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    max-width: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
 }
 
 #page-toc h2 {
@@ -445,8 +495,24 @@ table td {
     margin-right: 0;
 }
 
+#page-toc.sticky h2 {
+    margin-top: 48px;
+}
+
+#page-toc.sticky h2,
+#page-toc.sticky ul {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 480px;
+    width: 480px;
+}
+
 #page-toc li {
-    margin: 14px 0;
+    margin: 16px 0;
+}
+
+#page-toc.sticky li {
+    margin-left: 14px;
 }
 
 #page-toc li:last-child {

@@ -1,9 +1,14 @@
 {{ $pagesTotal := len .Pages }}
 {{ $hasPages := gt $pagesTotal 0 }}
 {{ $showToc := and .Site.Params.UweUwe.Toc.Display $hasPages }}
+{{ $tocDisplayMode := .Site.Params.UweUwe.Toc.DisplayMode }}
 
 {{ if $showToc }}
-    <nav id="page-toc" class='{{ .Site.Params.UweUwe.Toc.DisplayMode | default "static" }}'>
+    {{ if eq $tocDisplayMode "static" }}
+        <nav id="page-toc" class="static">
+    {{ else }}
+        <nav id="page-toc">
+    {{ end }}
         <h2>Table of Contents</h2>
         <ul>
             {{ range .Pages }}

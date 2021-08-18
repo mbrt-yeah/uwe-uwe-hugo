@@ -1,5 +1,8 @@
-{{ $showTocButton := or eq .Site.Params.UweUwe.Toc.DisplayMode "sticky" eq .Site.Params.UweUwe.Toc.DisplayMode "mixed" }}
+{{ $showTocButton := or (eq .Site.Params.UweUwe.Toc.DisplayMode "sticky") (eq .Site.Params.UweUwe.Toc.DisplayMode "mixed") }}
 
-{{ if $showTocButton }}
-    <button>TOC</button>
+{{ if and $showTocButton .Site.Params.UweUwe.Toc.Display }}
+    <button id="toc-button">
+        <img class="toc-button-img" src="/assets/img/icons/toc-icon.svg" height="48" width="48" />
+        <span class="toc-button-text">TOC</span>
+    </button>
 {{ end }}
