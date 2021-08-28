@@ -6,6 +6,10 @@
 
     <title>{{ .Site.Title }}</title>
 
+    {{ if .Site.Params.Uweuwe.Favicon.Display }}
+        <link rel="icon" type="image/png" href="{{ .Site.Params.Uweuwe.Favicon.Src }}" />
+    {{end}}
+
     {{- partial "head-js.html" . -}}
     {{- partial "head-css.html" . -}}
 </head>
