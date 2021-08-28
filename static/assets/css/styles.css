@@ -356,6 +356,12 @@ table td {
     max-width: 480px;
 }
 
+p > img {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
 @media screen and (min-width: 529px) {
     #page-header,
     #page-toc,
