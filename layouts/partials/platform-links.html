@@ -6,7 +6,7 @@
         {{ range .Site.Params.UweUwe.PlatformLinks.Platforms }}
             {{ if .display }}
                 <li>
-                    <a href='{{ .target | default "#" }}' title="{{ .title }}">
+                    <a href='{{ .target | default "#" }}' title="{{ .title }}" target="_blank">
                         {{ if or (eq $displayMode "as-icons") (eq $displayMode "as-icons-and-text") }}
                             <img alt="{{ .name }} icon" src="{{ .iconSrc }}" width="36" height="36" />
                         {{ end }}
